@@ -35,41 +35,44 @@ Visual Studio Code supports Flutter web development with the v3.0 release of the
 
 ## Workflow for terminal
 1. Install Dart Framework (for web demonstration)
-[brew tap dart-lang/dart]
-[brew install dart]
-[pub global activate webdev]
-[pub global activate stagehand]
+- brew tap dart-lang/dart
+- brew install dart
+- pub global activate webdev
+- pub global activate stagehand
 ::Add command to .zsh_profile - export PATH="$PATH":"$HOME/.pub-cache/bin”
-[source ~/.zshrc]
+- source ~/.zshrc
 
 2. Install Flutter Framework
-[> mkdir ~/Library/Development && cp ~/Downloads/flutter_macos_v1.5.4-hotfix.2-stable.zip ~/Library/Development]
-[> cd ~/Library/Development && unzip flutter_macos_v1.5.4-hotfix.2-stable.zip]
-::Add command to .zsh_profile - export PATH="$PATH":"$HOME/Library/Development/flutter/bin"
-[> source ~/.zshrc]
-[> cd Projects]
-[> mkdir DartProjects && cd DartProjects]
-[> mkdir quickstart && cd quickstart]
-[> pub global activate stagehand]
-[> stagehand]
-[> stagehand web-simple]
-[> pub get]
-[> webdev serve --auto restart]
-::Run web project: http://localhost:8080/
+- mkdir ~/Library/Development && cp ~/Downloads/flutter_macos_v1.5.4-hotfix.2-stable.zip ~/Library/Development
+- cd ~/Library/Development && unzip flutter_macos_v1.5.4-hotfix.2-stable.zip
+
+Add command to .zsh_profile - export PATH="$PATH":"$HOME/Library/Development/flutter/bin"
+
+- source ~/.zshrc
+- cd Projects
+- mkdir DartProjects && cd DartProjects
+- mkdir quickstart && cd quickstart
+- pub global activate stagehand
+- stagehand
+- stagehand web-simple
+- pub get
+- webdev serve --auto restart
+
+Run web project: http://localhost:8080/
 
 3. Create Flutter Project
-[> brew upgrade cocoapods]
-[> sudo gem install cocoapods]
-[> pod setup]
-[> pod --version => must be 1.5.0 or greater]
-[> cd DartProjects]
-[> git clone https://github.com/ibhavikmakwana/FlutterPlayground.git FlutterPlayground]
-[> cd FlutterPlayground]
-[> flutter upgrade]
-[> flutter precache]
-[> flutter config --no-analytics]
-[> flutter pub global activate webdev]
-[> flutter packages pub global activate webdev]
-[> flutter emulators => take emulatorID]
-[> flutter emulators --launch apple_ios_simulator]
-[> flutter run]
+- brew upgrade cocoapods
+- sudo gem install cocoapods
+- pod setup
+- pod --version => must be 1.5.0 or greater
+- cd DartProjects
+- git clone https://github.com/ibhavikmakwana/FlutterPlayground.git FlutterPlayground
+- cd FlutterPlayground
+- flutter upgrade
+- flutter precache
+- flutter config --no-analytics
+- flutter pub global activate webdev
+- flutter packages pub global activate webdev
+- flutter emulators => take 'emulatorID'
+- flutter emulators --launch 'emulatorID'
+- flutter run
